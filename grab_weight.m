@@ -11,7 +11,7 @@ function c = compare(thisWeight)
         c = 0;
     end 
 end
-function f = find_face(data)
+function f = find_face(data, face)
     sm = NaN;
     for i = 1:size(data, 1)
         c = compare(find_weight(i));
@@ -26,7 +26,9 @@ function f = find_face(data)
         end
     end
     if isnan(sm)
-        add_to_data(face) %Fix this later
+        add_to_data(data,face) %Fix this later
     end 
     f = sm;
+end
+function add_to_data(data, face) %Implement when data is available.
 end
